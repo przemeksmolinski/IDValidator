@@ -15,23 +15,27 @@ public class PolishIdValidatorTest {
     }
 
     @Test
-    public void validate(){
+    public void testIsCorrectIdValidatesTrue(){
         Assert.assertTrue(polishIdValidator.validate("WZM123456"));
     }
 
     @Test
-    public void isEmpty(){
+    public void testIsEmptyIdFalse(){
         Assert.assertFalse(polishIdValidator.validate(""));
     }
 
     @Test
-    public void mixValidate(){
+    public void testIsMixIdValidateFalse(){
         Assert.assertFalse(polishIdValidator.validate("123ACV456"));
     }
 
     @Test
-    public void tooShortValidate(){
+    public void testTooShortIdValidateFalse(){
         Assert.assertFalse(polishIdValidator.validate("A1"));
+    }
+    @Test
+    public void testValidate(){
+        Assert.assertTrue(polishIdValidator.validate("ATM930408"));
     }
 
 }
