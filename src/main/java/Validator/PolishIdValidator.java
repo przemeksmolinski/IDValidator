@@ -1,5 +1,8 @@
 package Validator;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 public class PolishIdValidator implements Validator{
 
     static char letterValues[] =
@@ -8,10 +11,18 @@ public class PolishIdValidator implements Validator{
                     'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
                     'U', 'V', 'W', 'X', 'Y', 'Z'};
 
+    int idElements[] = {7, 3, 1, 9, 7, 3, 1, 7, 3};
+
+   // Map<String, Integer> mapValues = new TreeMap<>();
+
+
     @Override
     public boolean validate(String toValidate) {
 
         while(toValidate.matches("[A-Z]{3}[0-9]{6}")){
+            for (int i = 0; i < idElements.length; i++) {
+
+            }
             return true;
 
         }
